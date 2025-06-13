@@ -1,0 +1,1508 @@
+$bordercolor: rgba(255, 255, 255, .2);
+$selecthover: rgba(255, 255, 255, .5);
+$formcontrol: rgba(255, 255, 255, .1);
+$shadow: rgba(0, 0, 0, .4);
+$boxshadow: 0px 3px 10px rgba(0, 0, 0, .3);
+$navcolor: rgba(255, 255, 255, .1);
+$btncustom: rgba(255, 255, 255, .1);
+$btnhover: rgba(255, 255, 255, .2);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@font-face {
+    src: url(/fonts/Poppins-Thin.ttf);
+    font-family: 'poppinsthin';
+}
+
+@font-face {
+    src: url(/fonts/Poppins-ExtraLight.ttf);
+    font-family: 'poppinsxlight';
+}
+
+@font-face {
+    src: url(/fonts/Poppins-Light.ttf);
+    font-family: 'poppinslight';
+}
+
+@font-face {
+    src: url(/fonts/Poppins-Regular.ttf);
+    font-family: 'poppins';
+}
+
+@font-face {
+    src: url(/fonts/PoiretOne-Regular.ttf);
+    font-family: 'poiret';
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'poppinslight';
+    background: radial-gradient(rgb(55, 55, 55), rgb(15, 15, 15));
+    background-attachment: fixed;
+    color: #fff;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar {
+    font-family: 'poppinsthin';
+    font-weight: 900;
+    height: 70px;
+    display: flex;
+    padding: 0 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 1s ease-in-out;
+    z-index: 10;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    padding-top: 15px;
+}
+
+.nav-logo {
+    font-size: 25px;
+    font-family: 'poiret';
+    color: #fff;
+    margin-right: auto;
+    text-shadow: 2px 2px 1px rgba(255, 255, 255, .5);
+}
+
+.nav-login,
+.nav-cart,
+.nav-connect {
+    display: none;
+}
+
+.badge {
+    display: none;
+}
+
+.nav-link,
+.nav-cart a,
+.nav-connects a {
+    color: #fff;
+}
+
+.nav-link:hover,
+.nav-connects a:hover {
+    color: $selecthover;
+}
+
+.nav-connect {
+    display: none;
+}
+
+.nav-connects {
+    display: none;
+}
+
+.nav-connects a {
+    padding-right: 30px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 26px;
+    height: 2px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: #fff;
+    border-radius: 1px;
+}
+
+.btn-nav {
+    font-family: 'poppinsthin';
+    font-weight: 900;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    height: 40px;
+    padding: 0 20px;
+    margin-left: 20px;
+    transition: all 0.2s ease;
+}
+
+.btn-nav a {
+    color: #fff;
+}
+
+.btn-nav:hover {
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px #fff;
+}
+
+.navbar-scrolled {
+    background: $navcolor;
+    backdrop-filter: blur(10px);
+    box-shadow: $boxshadow;
+}
+
+.navbar.fixed {
+    position: fixed;
+}
+
+@media (max-width: 870px) {
+
+    .navbar {
+        padding: 0 12px;
+        position: fixed;
+        background: $navcolor;
+        backdrop-filter: blur(10px);
+        z-index: 10;
+    }
+
+    .nav-menu {
+        font-family: 'poppinslight';
+        font-weight: 100;
+        padding-top: 15px;
+        position: fixed;
+        display: flex;
+        top: 70px;
+        gap: 0;
+        right: -100%;
+        width: 322px;
+        height: 100vh;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: all 0.3s ease-in-out;
+        background: $navcolor;
+        border-top: 2px solid $bordercolor;
+        box-shadow: -3px 0 10px rgba(0, 0, 0, .3);
+        z-index: 6;
+    }
+
+    .nav-blur {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 322px;
+        backdrop-filter: blur(10px);
+        display: block;
+        height: 100vh;
+        z-index: 3;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .body-blur {
+        visibility: hidden;
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .5);
+        z-index: 3;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-item {
+        padding: 15px 0;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-blur.active {
+        right: 0;
+    }
+
+    .body-blur.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .btn-nav {
+        display: none;
+    }
+
+    .nav-login,
+    .nav-connect,
+    .nav-connects {
+        display: block;
+    }
+
+    .nav-cart {
+        display: block;
+        padding-right: 20px;
+        padding-top: 9px;
+        font-size: 33px;
+    }
+
+    .badge {
+        position: absolute;
+        top: 15px;
+        right: 53px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        color: rgba(0, 0, 0, 0.6);
+        font-family: 'Poppins';
+        letter-spacing: -0.2px;
+        font-size: 10px;
+        font-weight: 900;
+        line-height: 1;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
+
+@media (max-width: 540px) {
+
+    .nav-menu {
+        width: 320px;
+    }
+
+    .nav-blur {
+        width: 320px;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .nav-logo {
+        font-size: 22px;
+    }
+
+    .nav-menu {
+        width: 260px;
+    }
+
+    .nav-blur {
+        width: 260px;
+    }
+}
+
+@media (max-width: 414px) {
+
+    .nav-menu {
+        width: 240px;
+    }
+
+    .nav-blur {
+        width: 240px;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .nav-menu {
+        width: 220px;
+    }
+
+    .nav-blur {
+        width: 220px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .nav-logo {
+        font-size: 20px;
+    }
+
+    .nav-menu {
+        width: 200px;
+    }
+
+    .nav-blur {
+        width: 200px;
+    }
+
+    .nav-connects a {
+        padding-right: 20px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #292929;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $selecthover;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:active {
+    background-color: #fff;
+}
+
+.form-control {
+    height: 40px;
+    border: 0;
+    border-radius: 4px;
+    background: $formcontrol;
+    color: #fff;
+    font-family: 'poppinslight';
+}
+
+.form-control:hover {
+    background: $btnhover;
+}
+
+.form-control:focus {
+    background: $btnhover;
+    color: #fff;
+    box-shadow: none;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, .3);
+}
+
+.checkbox a,
+.reg-log .log-bottom a {
+    color: #fff;
+}
+
+.checkbox a:hover,
+.reg-log .log-bottom a:hover {
+    color: $selecthover;
+}
+
+.checkbox,
+.radio {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+// CUSTOM CHECKBOX
+.checkbox input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 18px;
+    height: 18px;
+    background-color: $formcontrol;
+    //border: 1px solid #fff;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    flex-shrink: 0;
+}
+
+// PIPA — VÉKONY, ANIMÁLT
+.checkbox input[type="checkbox"]::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 11px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%) rotate(45deg) scale(0);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+// BEJELÖLVE — PIPA MEGJELENIK
+.checkbox input[type="checkbox"]:checked::after {
+    opacity: 1;
+    transform: translate(-50%, -60%) rotate(45deg) scale(1);
+}
+
+// KIKAPCSOLÁSKOR IS ANIMÁLTAN TŰNJÖN EL
+.checkbox input[type="checkbox"]:not(:checked)::after {
+    opacity: 0;
+    transform: translate(-50%, -60%) rotate(45deg) scale(1);
+    transition: all 0.3s ease;
+}
+
+// RADIO WRAPPER — igazítás és alapbeállítás
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 18px;
+    height: 18px;
+    //border: 1px solid #fff;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    background-color: $formcontrol;
+    transition: all 0.3s ease-in-out;
+    flex-shrink: 0;
+    vertical-align: middle;
+}
+
+// BELÜL KÖR — az aktív állapothoz
+input[type="radio"]::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+// CHECKED — belső kör megjelenítése
+input[type="radio"]:checked::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+// HOVER / FÓKUSZ EFFEKT — finom kiemelés
+input[type="radio"]:hover,
+input[type="checkbox"]:hover {
+    //box-shadow: 0 0 0 3px rgba(255, 255, 255, .2);
+    background-color: $btnhover;
+}
+
+.btn-custom {
+    font-family: 'poppinslight';
+    height: 40px;
+    color: #fff;
+    border-radius: 4px;
+    background: $btncustom;
+}
+
+.btn-custom:hover {
+    color: #fff;
+    background: $btnhover;
+}
+
+.header-menu,
+.header-about,
+.header-contact,
+.header-regist,
+.header-login,
+.header-cart {
+    background-position: center center;
+    background-size: cover;
+    height: 400px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-menu {
+    background-image: url(/img/Par-Bar-0.jpg);
+}
+
+.header-about {
+    background-image: url(/img/Par\ Bar\ 3_\ 19.jpg);
+}
+
+.header-contact {
+    background-image: url(/img/Par\ Bar³\ _4.jpg);
+}
+
+.header-regist {
+    background-image: url(/img/par\ bar\ slider.jpg);
+}
+
+.header-login {
+    background-image: url(/img/Par\ Bar餐厅\ _\ YODEZEEN-2.jpg);
+}
+
+.header-cart {
+    background-image: url(/img/par\ bar\ slider4.jpg);
+}
+
+.header-menu img,
+.header-about img,
+.header-contact img,
+.header-regist img,
+.header-login img,
+.header-cart img {
+    height: 300px;
+    width: 300px;
+    margin-top: 55px;
+    z-index: 1;
+    position: relative;
+}
+
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: $shadow;
+}
+
+.menu-badges {
+    font-family: 'poppinsxlight';
+    text-shadow: $boxshadow;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $bordercolor;
+    margin-top: 50px;
+}
+
+.menu {
+    font-family: 'poppinsxlight';
+    padding-top: 50px;
+}
+
+.menu h1 {
+    font-family: 'poppinsxlight';
+    text-shadow: $boxshadow;
+}
+
+.menu h2 {
+    font-family: 'poppinsxlight';
+    text-shadow: $boxshadow;
+    padding: 50px 0;
+}
+
+.menu .mobile-steak {
+    text-align: center;
+    padding-bottom: 118px;
+    display: none;
+}
+
+.menu .mobile {
+    text-align: center;
+    padding-bottom: 70px;
+    display: none;
+}
+
+.menu .mobile-steak img,
+.menu .mobile img {
+    height: 250px;
+    width: 250px;
+    box-shadow: $boxshadow;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.menu .food-box {
+    border-bottom: 1px solid $bordercolor;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.menu .food-box img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    box-shadow: $boxshadow;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.menu .order {
+    display: flex;
+    justify-content: end;
+    list-style: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 20px;
+}
+
+.menu .price {
+    font-family: 'poppinsxlight';
+    color: #fff;
+    font-size: 18px;
+    position: absolute;
+    bottom: 7px;
+    right: 143px;
+}
+
+.dropdown-steak {
+    width: 210px;
+    position: absolute;
+    bottom: 116px;
+    right: 0;
+}
+
+.dropdown-steak .select-btn {
+    height: 40px;
+    display: flex;
+    background: $formcontrol;
+    box-shadow: $boxshadow;
+    color: #fff;
+    padding: 0 13px;
+    border-radius: 4px;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'poppinslight';
+    justify-content: space-between;
+}
+
+.dropdown-steak .options {
+    font-family: 'poppinslight';
+    position: absolute;
+    top: 48px;
+    width: 210px;
+    padding: 0;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    background: $formcontrol;
+    backdrop-filter: blur(10px);
+    box-shadow: $boxshadow;
+    z-index: 5;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.dropdown-steak.active .options {
+    visibility: visible;
+    opacity: 1;
+}
+
+.select-btn ion-icon {
+    transition: all 0.5s ease-in-out;
+}
+
+.dropdown-steak.active .select-btn ion-icon {
+    transform: rotate(-180deg);
+}
+
+.options li {
+    display: flex;
+    height: 40px;
+    cursor: pointer;
+    padding: 0 13px;
+    align-items: center;
+}
+
+.options li:hover {
+    color: $selecthover;
+}
+
+.menu .dropdown {
+    width: 210px;
+    position: absolute;
+    bottom: 68px;
+    right: 0;
+}
+
+.select {
+    height: 40px;
+    display: flex;
+    background: $formcontrol;
+    box-shadow: $boxshadow;
+    color: #fff;
+    padding: 0 13px;
+    border-radius: 4px;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'poppinslight';
+    justify-content: space-between;
+}
+
+.select .arrow {
+    transition: all 0.5s ease-in-out;
+    padding-top: 6px;
+}
+
+.select .arrow-rotate {
+    transform: rotate(180deg);
+}
+
+.dropmenu {
+    font-family: 'poppinslight';
+    list-style: none;
+    position: absolute;
+    top: 48px;
+    width: 210px;
+    padding-left: 0;
+    border-radius: 4px;
+    background: $formcontrol;
+    backdrop-filter: blur(10px);
+    box-shadow: $boxshadow;
+    color: #fff;
+    z-index: 4;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropmenu-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropmenu li {
+    padding: 8px 13px;
+    cursor: pointer;
+}
+
+.dropmenu li:hover {
+    color: $selecthover;
+}
+
+.contact .dropdown {
+    width: 100%;
+    position: relative;
+    bottom: auto;
+    right: auto;
+}
+
+.contact .select {
+    box-shadow: none;
+}
+
+.contact-face i,
+.contact-insta i {
+    font-size: 18px;
+}
+
+.contact .dropmenu {
+    width: 176px;
+    max-height: 205px;
+    overflow-y: auto;
+}
+
+.menu .extras {
+    display: flex;
+    justify-content: end;
+    list-style: none;
+    border-bottom: 1px solid $bordercolor;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.menu .extras-last {
+    border-bottom: 0;
+}
+
+.menu .btn {
+    padding: 0 19px;
+    height: 40px;
+    font-family: 'poppinslight';
+    box-shadow: $boxshadow;
+}
+
+.btn-food {
+    color: #fff;
+    border-radius: 4px;
+    background: $formcontrol;
+}
+
+.btn-food:hover {
+    background: $btnhover;
+}
+
+.about h1,
+.contact h1 {
+    font-family: 'poppinsxlight';
+    text-shadow: $boxshadow;
+    margin-bottom: 50px;
+}
+
+.about .space {
+    margin-top: 50px;
+}
+
+.about .c-item {
+    margin-top: 37px;
+    height: 500px;
+}
+
+.about .c-img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.mobile-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.mobile-logo img {
+    height: 340px;
+    width: 340px;
+    display: none;
+}
+
+.about,
+.contact {
+    padding: 50px 12px;
+}
+
+.about h3,
+.contact h3 {
+    font-family: 'poppinsxlight';
+    text-shadow: $boxshadow;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $bordercolor;
+}
+
+.contact textarea {
+    height: 175px;
+}
+
+.contact .reservation a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.contact .reservation a:hover {
+    color: $selecthover;
+}
+
+.contact .reservation-form {
+    margin-top: 38px;
+}
+
+.contact .event img {
+    margin-top: 39px;
+    height: 436px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.contact .map {
+    margin-top: 39px;
+}
+
+.contact iframe {
+    border-radius: 4px;
+    height: 340px;
+}
+
+.contact .btn {
+    width: 100%;
+}
+
+.cart {
+    padding: 50px 12px;
+}
+
+.cart h1 {
+    margin-bottom: 50px;
+    text-shadow: $boxshadow;
+    font-family: 'poppinsxlight';
+}
+
+.cart h3 {
+    padding: 25px 0;
+    text-shadow: $boxshadow;
+    font-family: 'poppinsxlight';
+}
+
+.cart .products-header {
+    font-family: 'poppinsxlight';
+    border-bottom: 1px solid $bordercolor;
+    display: flex;
+}
+
+.cart .x h5 {
+    display: none;
+}
+
+.cart .products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart .products i {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.cart .products i:hover {
+    color: $selecthover;
+}
+
+.cart .product {
+    border-bottom: 1px solid $bordercolor;
+    padding: 20px 0;
+    padding-right: 13px;
+    width: 40%;
+}
+
+.cart .price {
+    border-bottom: 1px solid $bordercolor;
+    padding: 20px 0;
+    width: 20%;
+}
+
+.cart .quantity {
+    border-bottom: 1px solid $bordercolor;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    padding-right: 133px;
+    width: 20%;
+}
+
+.cart .amount {
+    border-bottom: 1px solid $bordercolor;
+    padding: 20px 0;
+    width: 15%;
+}
+
+.cart .x {
+    border-bottom: 1px solid $bordercolor;
+    padding: 20px 0;
+    width: 5%;
+    text-align: end;
+}
+
+.cart .x i {
+    padding: 0;
+}
+
+.cart .total {
+    font-family: 'poppinsxlight';
+    margin-top: 80px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid $bordercolor;
+    width: 54%;
+    display: flex;
+}
+
+.cart .total-cost {
+    color: red;
+    font-family: 'poppinslight';
+    text-align: end;
+}
+
+.cart img {
+    height: 360px;
+    width: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.cart .img-first {
+    margin-top: 124px;
+}
+
+.cart .img-second {
+    margin-top: 8px;
+}
+
+.cart .form-check-label {
+    cursor: pointer;
+}
+
+.cart .btn {
+    width: 100%;
+}
+
+.reg-log {
+    padding: 50px 200px;
+}
+
+.reg-log h1 {
+    font-family: 'poppinsxlight';
+    text-shadow: $boxshadow;
+}
+
+
+.reg-log .check-reg,
+.reg-log .log-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reg-log .checkbox .text-mobile,
+.reg-log .reverse .text-mobile {
+    display: none;
+}
+
+.reg-log .checkbox.reverse {
+    flex-direction: row-reverse;
+}
+
+.reg-log .btn {
+    width: 100%;
+}
+
+.btn-cost {
+    background: $btncustom;
+    backdrop-filter: blur(10px);
+    box-shadow: $boxshadow;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    bottom: 12px;
+    left: 12px;
+    height: 50px;
+    border-radius: 4px;
+    transition: all 1s ease;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.btn-cost ion-icon {
+    font-size: 26px;
+    padding-top: 8px;
+    padding-right: 5px;
+}
+
+.btn-cost a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.to-top {
+    background: $btncustom;
+    backdrop-filter: blur(10px);
+    box-shadow: $boxshadow;
+    color: #fff;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    pointer-events: none;
+    transition: all 1s ease;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.to-top.activated {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.footer {
+    padding-top: 50px;
+    background-image: url(/img/footer-background.jpg);
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+}
+
+.footer-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    background: $shadow;
+}
+
+.footer-opening,
+.footer-connect,
+.footer-contacts {
+    position: relative;
+    z-index: 1;
+}
+
+.footer-connect .btn-face,
+.footer-connect .btn-twitter,
+.footer-connect .btn-insta,
+.footer-connect .btn-tiktok {
+    height: 40px;
+
+}
+
+.footer-connect .btn-face i,
+.footer-connect .btn-tiktok i {
+    font-size: 19px;
+    padding-top: 2px;
+}
+
+.footer-connect .btn-twitter i {
+    font-size: 20px;
+    padding-top: 2px;
+}
+
+.footer-connect .btn-insta i {
+    font-size: 23px;
+}
+
+.footer .btn {
+    width: 74px;
+    margin-bottom: 10px;
+    padding: 7px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.footer .btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+.copyright {
+    position: relative;
+    z-index: 1;
+}
+
+.copyright a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.copyright a:hover {
+    color: $selecthover;
+}
+
+@media (max-width: 1300px) {
+
+    .contact .dropmenu {
+        width: 146px;
+    }
+
+    .about .space {
+        margin-top: 30px;
+    }
+
+    .cart .quantity {
+        padding-right: 100px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .btn-custom:hover,
+    .btn-food:hover {
+        background: $formcontrol;
+    }
+
+    .btn-cost:active,
+    .to-top:active {
+        background: rgba(255, 255, 255, .3) !important;
+        transition: all 0.1s ease;
+    }
+
+    .btn-custom:active,
+    .btn-food:active {
+        background: transparent !important;
+        border: 1px solid white;
+        color: white;
+        transition: all 0.2s ease;
+    }
+
+    input[type="radio"]:hover,
+    input[type="checkbox"]:hover {
+        background-color: $formcontrol;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .about .space {
+        margin-top: 0;
+    }
+
+    .about .c-item {
+        margin-top: 0;
+    }
+
+    .contact .event img,
+    .contact iframe,
+    .about .carousel {
+        box-shadow: $boxshadow;
+    }
+
+    .contact .dropmenu {
+        width: 226px;
+    }
+
+    .contact .reservation-form {
+        margin-top: 0;
+    }
+
+    .contact .event img {
+        margin: 0;
+    }
+
+    .contact .reservation-input {
+        margin: 0;
+    }
+
+    .contact .map {
+        margin-top: 0;
+    }
+
+    .reg-log {
+        padding: 50px 100px;
+    }
+
+    .cart .images {
+        display: none;
+    }
+
+    .cart .products i:hover {
+        color: #fff;
+    }
+
+    .cart .quantity {
+        padding-right: 50px;
+    }
+
+    .cart .total {
+        width: 56%;
+    }
+}
+
+@media (max-width: 870px) {
+
+    body {
+        background: rgb(35, 35, 35);
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    .header-menu img,
+    .header-about img,
+    .header-contact img,
+    .header-regist img,
+    .header-login img,
+    .header-cart img {
+        margin-top: 85px;
+    }
+
+    .menu-badges {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        padding-bottom: 20px;
+    }
+
+    .menu .food-box img {
+        display: none;
+    }
+
+    .menu .mobile-steak {
+        display: block;
+    }
+
+    .menu .mobile {
+        display: block;
+    }
+
+    .menu .price {
+        margin-top: 10px;
+    }
+
+    .menu .order {
+        position: relative;
+    }
+
+    .cart .price {
+        align-items: center;
+        display: flex;
+    }
+
+    .cart .quantity {
+        align-items: center;
+    }
+
+    .cart .amount,
+    .cart .x {
+        align-items: center;
+        display: flex;
+        justify-content: end;
+    }
+
+    .cart .amount h5 {
+        display: none;
+    }
+
+    .cart .x h5 {
+        display: block;
+    }
+
+    .cart .total {
+        width: 100%;
+    }
+
+    .reg-log {
+        padding: 50px 12px;
+    }
+
+    .btn-cost {
+        bottom: 12px;
+        left: 12px;
+    }
+
+    .btn-cost.activated {
+        bottom: 12px;
+        left: 12px;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .to-top,
+    .to-top.activated {
+        right: 12px;
+        bottom: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .contact .dropmenu {
+        width: 166px;
+    }
+
+    .cart .quantity {
+        padding-right: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .header-menu,
+    .header-about,
+    .header-contact,
+    .header-regist,
+    .header-login,
+    .header-cart {
+        height: 350px;
+    }
+
+    .header-menu img,
+    .header-about img,
+    .header-contact img,
+    .header-regist img,
+    .header-login img,
+    .header-cart img {
+        display: none;
+    }
+
+    .menu-badges {
+        gap: 10px;
+    }
+
+    .shadow {
+        background: none;
+    }
+
+    .about .carousel {
+        display: none;
+    }
+
+    .about .mobile-logo img {
+        display: block;
+    }
+
+    .contact .dropmenu {
+        width: 95%;
+    }
+
+    .cart .price,
+    .cart .quantity,
+    .cart .qty-incart,
+    .cart .amount {
+        font-size: 20px;
+        font-family: 'poppinsxlight';
+    }
+
+    .cart .products i {
+        padding: 0;
+        font-size: 25px;
+    }
+
+    .cart .quantity {
+        padding-right: 20px;
+    }
+
+    .footer-shadow {
+        background: rgba(0, 0, 0, .2);
+    }
+}
+
+@media (max-width: 500px) {
+
+    .header-menu,
+    .header-about,
+    .header-contact,
+    .header-regist,
+    .header-login,
+    .header-cart {
+        height: 300px;
+    }
+
+    .contact .dropmenu {
+        width: 94%;
+    }
+
+    .cart .quantity {
+        padding-right: 5px;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .reg-log .checkbox .text-desktop,
+    .reg-log .reverse .text-desktop {
+        display: none;
+    }
+
+    .reg-log .checkbox .text-mobile,
+    .reg-log .reverse .text-mobile {
+        display: inline;
+    }
+}

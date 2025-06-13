@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Menu</title>
+    <link rel="stylesheet" href="/scss/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="/index.html" class="nav-logo">SOUL KITCHEN</a>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="/index.html" class="nav-link">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a href="/menu.html" class="nav-link">MENU</a>
+            </li>
+            <li class="nav-item">
+                <a href="/about.html" class="nav-link">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+                <a href="/contact.html" class="nav-link">CONTACT US</a>
+            </li>
+            <li class="nav-item">
+                <a href="/regist.html" class="nav-link">SIGN UP</a>
+            </li>
+            <li class="nav-item">
+                <a href="/login.html" class="nav-link">SIGN IN</a>
+            </li>
+            <li class="nav-item nav-connect">
+                <span>LET'S CONNECT</span>
+            </li>
+            <li class="nav-item nav-connects">
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </li>
+        </ul>
+        <button class="btn btn-nav">
+            <a href="/cart.html">CART <span class="show-amount"> 0</span> FT</a>
+        </button>
+        <div class="nav-cart">
+            <a href="/cart.html"><ion-icon name="cart-outline"></ion-icon></a>
+        </div>
+        <div class="nav-qty">
+            <span class="badge">0</span>
+        </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    <div class="nav-blur"></div>
+    <div class="body-blur"></div>
+
+    <div class="header-menu">
+        <div class="shadow"></div>
+        <img src="/img/soul-logo.png">
+    </div>
+
+    <div class="menu container-fluid">
+
+        <h1 class="text-center">MENU</h1>
+
+        <div class="menu-badges container">
+            <div><i class="fa-solid fa-jar-wheat"></i> Contains Gluten</div>
+            <div><i class="fa-solid fa-bottle-water"></i> Contains Lactose</div>
+            <div><i class="fa-solid fa-egg"></i> Contains Eggs</div>
+            <div><i class="fa-brands fa-creative-commons-zero"></i> All Free</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md">
+
+                <h2>Starters</h2>
+
+                <h5>Libamáj Mousse Fügével Hagymalekvárral Kaláccsal</h5>
+                <p>
+                    <i class="fa-solid fa-jar-wheat"></i>
+                    <i class="fa-solid fa-bottle-water"></i>
+                </p>
+                <div class="mobile">
+                    <img src="/img/foods/goose.jpg">
+                </div>
+                <div class="food-box">
+                    <div>
+                        <img src="/img/foods/goose.jpg">
+                    </div>
+                    <ul class="order">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="goose">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h5>Tatár Beefsteak Zöldségekkel Pirítóssal</h5>
+                <p>
+                    <i class="fa-solid fa-jar-wheat"></i>
+                    <i class="fa-solid fa-bottle-water"></i>
+                    <i class="fa-solid fa-egg"></i>
+                </p>
+                <div class="mobile">
+                    <img src="/img/foods/tatar.jpg">
+                </div>
+                <div class="food-box">
+                    <div>
+                        <img src="/img/foods/tatar.jpg">
+                    </div>
+                    <ul class="order">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="tatar">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h5>Tigrisrák Gambas Pil Pil Házi Bagettel</h5>
+                <p>
+                    <i class="fa-solid fa-jar-wheat"></i>
+                </p>
+                <div class="mobile">
+                    <img src="/img/foods/gambas.jpg">
+                </div>
+                <div class="food-box">
+                    <div>
+                        <img src="/img/foods/gambas.jpg">
+                    </div>
+                    <ul class="order">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="gambas">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h2>Soups</h2>
+
+                <h5>Tokyo Ramen</h5>
+                <p>
+                    <i class="fa-solid fa-jar-wheat"></i>
+                    <i class="fa-solid fa-egg"></i>
+                </p>
+                <div class="mobile">
+                    <img src="/img/foods/ramen.jpg">
+                </div>
+                <div class="food-box">
+                    <div>
+                        <img src="/img/foods/ramen.jpg">
+                    </div>
+                    <ul class="order">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="ramen">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h5>Toszkán Halleves</h5>
+                <p>
+                    <i class="fa-solid fa-jar-wheat"></i>
+                </p>
+                <div class="mobile">
+                    <img src="/img/foods/fishsoup.jpg">
+                </div>
+                <div class="food-box">
+                    <div>
+                        <img src="/img/foods/fishsoup.jpg">
+                    </div>
+                    <ul class="order">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="fishsoup">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h5>Édesburgonya Krémleves</h5>
+                <p>
+                    <i class="fa-brands fa-creative-commons-zero"></i>
+                </p>
+                <div class="mobile">
+                    <img src="/img/foods/sweetsoup.jpg">
+                </div>
+                <div class="food-box">
+                    <div>
+                        <img src="/img/foods/sweetsoup.jpg">
+                    </div>
+                    <ul class="order">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="sweetsoup">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h2>Mains</h2>
+
+                <h5>SOUL Bélszín Steak Libamájjal</h5>
+                <p>
+                    <i class="fa-solid fa-jar-wheat"></i>
+                </p>
+                <div class="mobile-steak">
+                    <img src="/img/foods/steak.jpg">
+                </div>
+                <div class="food-box">
+                    <div>
+                        <img src="/img/foods/steak.jpg">
+                    </div>
+                    <div class="dropdown-steak">
+                        <div class="select-btn">
+                            <span class="sBtn-text">Medium Rare</span>
+                            <ion-icon name="chevron-down"></ion-icon>
+                        </div>
+                        <ul class="options">
+                            <li><span class="option-text">Rare</span></li>
+                            <li><span class="option-text">Medium Rare</span></li>
+                            <li><span class="option-text">Medium</span></li>
+                            <li><span class="option-text">Medium Well</span></li>
+                            <li><span class="option-text">Well Done</span></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">Friss Kevert Saláta</span>
+                            <div class="arrow"><ion-icon name="chevron-down"></ion-icon></div>
+                        </div>
+                        <ul class="dropmenu">
+                            <li>Steak Burgonya</li>
+                            <li>Csónakburgonya</li>
+                            <li>Édesburgonya</li>
+                            <li>Friss Kevert Saláta</li>
+                            <li>Vegyes Grill Zöldség</li>
+                        </ul>
+                    </div>
+                    <ul class="order">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="steak">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h5>SOUL Burger Házi Buciban</h5>
+                <p>
+                    <i class="fa-solid fa-jar-wheat"></i>
+                    <i class="fa-solid fa-bottle-water"></i>
+                </p>
+                <div class="mobile">
+                    <img src="/img/foods/burger.jpg">
+                </div>
+                <div class="food-box">
+                    <div>
+                        <img src="/img/foods/burger.jpg">
+                    </div>
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">Steak Burgonya</span>
+                            <div class="arrow"><ion-icon name="chevron-down"></ion-icon></div>
+                        </div>
+                        <ul class="dropmenu">
+                            <li>Steak Burgonya</li>
+                            <li>Csónakburgonya</li>
+                            <li>Édesburgonya</li>
+                        </ul>
+                    </div>
+                    <ul class="order">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="burger">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h5>SOUL Club Steak Sandwich</h5>
+                <p>
+                    <i class="fa-solid fa-jar-wheat"></i>
+                    <i class="fa-solid fa-bottle-water"></i>
+                </p>
+                <div class="mobile">
+                    <img src="/img/foods/sandwich.jpg">
+                </div>
+                <div class="food-box">
+                    <div>
+                        <img src="/img/foods/sandwich.jpg">
+                    </div>
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">Csónakburgonya</span>
+                            <div class="arrow"><ion-icon name="chevron-down"></ion-icon></div>
+                        </div>
+                        <ul class="dropmenu">
+                            <li>Csónakburgonya</li>
+                            <li>Steak Burgonya</li>
+                            <li>Édesburgonya</li>
+                        </ul>
+                    </div>
+                    <ul class="order">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="sandwich">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h5>Lilahagymával Sült Sajtos Csirke Ropogós Baconnel</h5>
+                <p>
+                    <i class="fa-solid fa-jar-wheat"></i>
+                    <i class="fa-solid fa-bottle-water"></i>
+                </p>
+                <div class="mobile">
+                    <img src="/img/foods/onionchicken.jpg">
+                </div>
+                <div class="food-box">
+                    <div>
+                        <img src="/img/foods/onionchicken.jpg">
+                    </div>
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">Édesburgonya</span>
+                            <div class="arrow"><ion-icon name="chevron-down"></ion-icon></div>
+                        </div>
+                        <ul class="dropmenu">
+                            <li>Édesburgonya</li>
+                            <li>Steak Burgonya</li>
+                            <li>Csónakburgonya</li>
+                            <li>Friss Kevert Saláta</li>
+                            <li>Vegyes Grill Zöldség</li>
+                        </ul>
+                    </div>
+                    <ul class="order">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="onionchicken">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h5>Toszkán Sonkába Tekert Csirke Mozarella Salátával</h5>
+                <p>
+                    <i class="fa-solid fa-jar-wheat"></i>
+                    <i class="fa-solid fa-bottle-water"></i>
+                </p>
+                <div class="mobile">
+                    <img src="/img/foods/toscanchicken.jpg">
+                </div>
+                <div class="food-box">
+                    <div>
+                        <img src="/img/foods/toscanchicken.jpg">
+                    </div>
+                    <ul class="order">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="toscanchicken">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                  <h5>Csípős Csirkeszárny Édesburgonyával Mártogatóssal</h5>
+                <p>
+                    <i class="fa-solid fa-jar-wheat"></i>
+                    <i class="fa-solid fa-bottle-water"></i>
+                </p>
+                <div class="mobile">
+                    <img src="/img/foods/chilichicken.jpg">
+                </div>
+                <div class="food-box">
+                    <div>
+                        <img src="/img/foods/chilichicken.jpg">
+                    </div>
+                    <ul class="order">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="chilichicken">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h5>BBQ Sertés Oldalas Sörben Sült Serpenyős Krumplival</h5>
+                <p>
+                    <i class="fa-solid fa-jar-wheat"></i>
+                </p>
+                <div class="mobile">
+                    <img src="/img/foods/bbq.jpg">
+                </div>
+                <div class="food-box">
+                    <div>
+                        <img src="/img/foods/bbq.jpg">
+                    </div>
+                    <ul class="order">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="bbq">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h5>Konfitált Sertéscsülök Hagymás Burgonyapürével</h5>
+                <p>
+                    <i class="fa-solid fa-jar-wheat"></i>
+                    <i class="fa-solid fa-bottle-water"></i>
+                </p>
+                <div class="mobile">
+                    <img src="/img/foods/csülök.jpg">
+                </div>
+                <div class="food-box">
+                    <div>
+                        <img src="/img/foods/csülök.jpg">
+                    </div>
+                    <ul class="order">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="csülök">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h5>Mediterrán Lecsó Sertésszűzzel Házi Bagettel</h5>
+                <p>
+                    <i class="fa-solid fa-jar-wheat"></i>
+                </p>
+                <div class="mobile">
+                    <img src="/img/foods/lecso.jpg">
+                </div>
+                <div class="food-box">
+                    <div>
+                        <img src="/img/foods/lecso.jpg">
+                    </div>
+                    <ul class="order">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="lecso">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h5>Mézes Chilis Lazac Grillezett Zöldségekkel</h5>
+                <p>
+                    <i class="fa-solid fa-jar-wheat"></i>
+                </p>
+                <div class="mobile">
+                    <img src="/img/foods/lazac.jpg">
+                </div>
+                <div class="food-box">
+                    <div>
+                        <img src="/img/foods/lazac.jpg">
+                    </div>
+                    <ul class="order">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="lazac">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h2>Desserts</h2>
+
+                <h5>Epres Nutellás Palacsinta Mascarponeval</h5>
+                <p>
+                    <i class="fa-solid fa-jar-wheat"></i>
+                    <i class="fa-solid fa-bottle-water"></i>
+                    <i class="fa-solid fa-egg"></i>
+                </p>
+                <div class="mobile">
+                    <img src="/img/foods/pancake.jpg">
+                </div>
+                <div class="food-box">
+                    <div>
+                        <img src="/img/foods/pancake.jpg">
+                    </div>
+                    <ul class="order">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="pancake" data-tag="pancake">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h5>Oreos Banános Cheesecake</h5>
+                <p>
+                    <i class="fa-solid fa-jar-wheat"></i>
+                    <i class="fa-solid fa-bottle-water"></i>
+                </p>
+                <div class="mobile">
+                    <img src="/img/foods/cheesecake.jpg">
+                </div>
+                <div class="food-box">
+                    <div>
+                        <img src="/img/foods/cheesecake.jpg">
+                    </div>
+                    <ul class=" order">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="cheesecake">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h5>Meggyes Tiramisu Pohárkrém</h5>
+                <p>
+                    <i class="fa-solid fa-jar-wheat"></i>
+                    <i class="fa-solid fa-bottle-water"></i>
+                    <i class="fa-solid fa-egg"></i>
+                </p>
+                <div class="mobile">
+                    <img src="/img/foods/tiramisu.jpg">
+                </div>
+                <div class="food-box">
+                    <div>
+                        <img src="/img/foods/tiramisu.jpg">
+                    </div>
+                    <ul class="order">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="tiramisu">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h2>Extras</h2>
+
+                <h5>Bagett</h5>
+                <div>
+                    <ul class="extras">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="bagett">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h5>Csónakburgonya</h5>
+                <div>
+                    <ul class="extras">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="frenchfries">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h5>Steakburgonya</h5>
+                <div>
+                    <ul class="extras">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="steakpotato">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h5>Édesburgonya</h5>
+                <div>
+                    <ul class="extras">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="sweetpotato">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h5>Vegyes Grill Zöldség</h5>
+                <div>
+                    <ul class="extras">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="vegetables">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h5>Friss Kevert Saláta</h5>
+                <div>
+                    <ul class="extras">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="salad">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h5>Paradicsomsaláta</h5>
+                <div>
+                    <ul class="extras">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="tomatosalad">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <h5>Uborkasaláta</h5>
+                <div>
+                    <ul class="extras extras-last">
+                        <li class="price">
+                            1000.-
+                        </li>
+                        <li>
+                            <button class="btn btn-food" data-tag="cucumbersalad">Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+    <footer class="footer text-center">
+        <div class="footer-shadow"></div>
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="footer-opening col-md-4 mb-5 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Opening hours</h5>
+                    <p class="mb-4"><i class="fa-solid fa-clock"></i></p>
+                    <p class="mb-0">Sunday - Thursday 11:00-0:00
+                        <br>Friday - Saturday 11:00-02:00
+                    </p>
+                </div>
+
+                <div class="footer-connect col-md-4 mb-5 mb-md-0">
+                    <h5 class="text-uppercase mb-5 ">Let's connect</h5>
+                    <a class="btn btn-face mx-1" href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a class="btn btn-twitter mx-1" href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a class="btn btn-insta mx-1" href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a class="btn btn-tiktok mx-1" href="#">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </div>
+
+                <div class="footer-contacts col-md-4 mb-5 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Contacts</h5>
+
+                    <p class="mb-0"><i class="fa-solid fa-location-dot"></i>
+                        3036 Gyöngyöstarján
+                        <br>Jókai Mór tér 2
+                    </p>
+                    <p class="mb-0"><i class="fa-solid fa-phone"></i>
+                        +36 30 295 22 15</p>
+                    <p class="mb-0"><i class="fa-solid fa-envelope"></i>
+                        totalmatt@gmail.com</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="copyright mt-md-3 pb-4 text-center text-white">
+            <div class="container">
+                <small><a href="#">View Privacy Policy</a> | All rights reserved &copy; 2025</small>
+            </div>
+        </div>
+
+    </footer>
+
+    <div class="btn-cost">
+        <a href="/cart.html"><ion-icon name="card-outline"></ion-icon></a>
+        <a href="/cart.html"><span class="show-amount"> 0</span> FT</a>
+    </div>
+
+    <a href="#" class="to-top">
+        <ion-icon name="chevron-up-outline"></ion-icon>
+    </a>
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/navbar.js"></script>
+    <script src="/js/dropdown.js"></script>
+    <script src="/js/shoppingcart.js"></script>
+      <script>
+    // iOS fix: enable :active styles
+    document.addEventListener("touchstart", function () {}, true);
+  </script>
+</body>
+
+</html>

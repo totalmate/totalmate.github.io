@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SoulKitchen</title>
+    <link rel="stylesheet" href="/scss/style.css">
+    <link rel="stylesheet" href="/scss/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="index-navbar">
+        <a href="#" class="nav-logo">SOUL KITCHEN</a>
+        <ul class="index-menu">
+            <li class="index-navitem">
+                <a href="/menu.html" class="nav-link">MENU</a>
+            </li>
+            <li class="index-navitem">
+                <a href="/about.html" class="nav-link">ABOUT US</a>
+            </li>
+            <li class="index-navitem">
+                <a href="/contact.html" class="nav-link">CONTACT US</a>
+            </li>
+            <li class="index-navitem">
+                <a href="/regist.html" class="nav-link">SIGN UP</a>
+            </li>
+            <li class="index-navitem index-logitem">
+                <a href="/login.html" class="nav-link">SIGN IN</a>
+            </li>
+        </ul>
+        <button class="btn btn-nav">
+            <a href="/login.html">SIGN IN</a>
+        </button>
+        <div class="index-login">
+            <a href="/login.html"><ion-icon name="log-in-outline"></ion-icon></a>
+        </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <div class="index container-fluid">
+        <div class="index-shadow"></div>
+        <div class="content">
+            <img src="img/soul-logo.png">
+            <h1>Check out our Menu</h1>
+            <h5>Order at Home or Book a Table in our Restaurant</h5>
+            <a href="/menu.html" class="btn btn-index-first me-1">Home Delivery</a>
+            <a href="/contact.html" class="btn btn-index-second ms-1">Table Booking</a>
+        </div>
+    </div>
+
+    <footer class="footer text-center">
+        <div class="footer-shadow"></div>
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="footer-opening col-md-4 mb-5 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Opening hours</h5>
+                    <p class="mb-4"><i class="fa-solid fa-clock"></i></p>
+                    <p class="mb-0">Sunday - Thursday 11:00-0:00
+                        <br>Friday - Saturday 11:00-02:00
+                    </p>
+                </div>
+
+                <div class="footer-connect col-md-4 mb-5 mb-md-0">
+                    <h5 class="text-uppercase mb-5 ">Let's connect</h5>
+                    <a class="btn btn-face mx-1" href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a class="btn btn-twitter mx-1" href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a class="btn btn-insta mx-1" href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a class="btn btn-tiktok mx-1" href="#">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </div>
+
+                <div class="footer-contacts col-md-4 mb-5 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Contacts</h5>
+
+                    <p class="mb-0"><i class="fa-solid fa-location-dot"></i>
+                        3036 Gyöngyöstarján
+                        <br>Jókai Mór tér 2
+                    </p>
+                    <p class="mb-0"><i class="fa-solid fa-phone"></i>
+                        +36 30 295 22 15</p>
+                    <p class="mb-0"><i class="fa-solid fa-envelope"></i>
+                        totalmatt@gmail.com</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="copyright mt-md-3 pb-4 text-center text-white">
+            <div class="container">
+                <small><a href="#">View Privacy Policy</a> | All rights reserved &copy; 2025</small>
+            </div>
+        </div>
+
+    </footer>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script>
+        const indexburger = document.querySelector(".hamburger");
+        const indexMenu = document.querySelector(".index-menu");
+
+        indexburger.addEventListener("click", () => {
+            indexburger.classList.toggle("active");
+            indexMenu.classList.toggle("active");
+        })
+
+        document.querySelectorAll(".index-menu").forEach
+            (n => n.addEventListener("click", () => {
+                indexburger.classList.remove("active");
+                indexMenu.classList.remove("active");
+            }));
+    </script>
+    <script>
+    // iOS fix: enable :active styles
+    document.addEventListener("touchstart", function () {}, true);
+  </script>
+</body>
+
+</html>

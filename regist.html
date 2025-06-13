@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/scss/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="/index.html" class="nav-logo">SOUL KITCHEN</a>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="/index.html" class="nav-link">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a href="/menu.html" class="nav-link">MENU</a>
+            </li>
+            <li class="nav-item">
+                <a href="/about.html" class="nav-link">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+                <a href="/contact.html" class="nav-link">CONTACT US</a>
+            </li>
+            <li class="nav-item">
+                <a href="/login.html" class="nav-link">SIGN IN</a>
+            </li>
+            <li class="nav-item nav-connect">
+                <span>LET'S CONNECT</span>
+            </li>
+            <li class="nav-item nav-connects">
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </li>
+        </ul>
+        <button class="btn btn-nav">
+            <a href="/regist.html" class="nav-link text-white">SIGN UP</a>
+        </button>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    <div class="nav-blur"></div>
+    <div class="body-blur"></div>
+
+    <div class="header-regist">
+        <div class="shadow"></div>
+        <img src="/img/soul-logo.png">
+    </div>
+
+    <div class="reg-log container">
+
+        <h1 class="text-center mb-3">SIGN UP</h1>
+
+        <label for="mail" class="form-label">Email</label>
+        <div class="mb-2">
+            <input type="text" class="form-control" id="mail">
+        </div>
+        <label for="password" class="form-label">Password</label>
+        <div class="row g-2">
+            <div class="col mb-2">
+                <input type="text" class="form-control" id="password">
+            </div>
+            <div class="col mb-2">
+                <input type="text" class="form-control" id="password" placeholder="Password Again">
+            </div>
+        </div>
+        <label for="name" class="form-label">Name</label>
+        <div class="row g-2">
+            <div class="col mb-2">
+                <input type="text" class="form-control" id="name" placeholder="First Name">
+            </div>
+            <div class="col mb-2">
+                <input type="text" class="form-control" id="name" placeholder="Last Name">
+            </div>
+        </div>
+        <label for="mobile" class="form-label">Mobile Number</label>
+        <div class="mb-2">
+            <input type="text" class="form-control" id="mobile">
+        </div>
+        <label for="adress" class="form-label">Home Adress</label>
+        <div class="row g-2">
+            <div class="col mb-2">
+                <input type="text" class="form-control" id="adress" placeholder="City">
+            </div>
+            <div class="col mb-2">
+                <input type="text" class="form-control" id="adress" placeholder="District">
+            </div>
+        </div>
+        <div class="row g-2">
+            <div class="col mb-2">
+                <input type="text" class="form-control" id="adress" placeholder="Street">
+            </div>
+            <div class="col mb-2">
+                <input type="text" class="form-control" id="adress" placeholder="House Number">
+            </div>
+        </div>
+        <div class="row g-2">
+            <div class="col mb-2">
+                <input type="text" class="form-control" id="adress" placeholder="Floor">
+            </div>
+            <div class="col mb-2">
+                <input type="text" class="form-control" id="adress" placeholder="Door">
+            </div>
+            <div class="col mb-2">
+                <input type="text" class="form-control" id="adress" placeholder="Bell">
+            </div>
+        </div>
+
+        <div class="check-reg">
+            <div class="checkbox">
+                <input type="checkbox" id="check-reg1">
+                <label for="check-reg1">
+                    <small><span class="text-desktop">I accept the <a href="#">Terms of Use</a></span></small>
+                    <small><span class="text-mobile">Accept <a href="#">Terms of Use</a></span></small>
+                </label>
+            </div>
+            <div class="checkbox reverse">
+                <input type="checkbox" id="check-reg2">
+                <label for="check-reg2">
+                    <small><span class="text-desktop">I accept the <a href="#">Privacy Policy</a></span></small>
+                    <small><span class="text-mobile">Accept <a href="#">Privacy Policy</a></span></small>
+                </label>
+            </div>
+        </div>
+
+        <div>
+            <button class="btn btn-custom mt-2">Sign Up</button>
+        </div>
+
+    </div>
+
+    <footer class="footer text-center">
+        <div class="footer-shadow"></div>
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="footer-opening col-md-4 mb-5 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Opening hours</h5>
+                    <p class="mb-4"><i class="fa-solid fa-clock"></i></p>
+                    <p class="mb-0">Sunday - Thursday 11:00-0:00
+                        <br>Friday - Saturday 11:00-02:00
+                    </p>
+                </div>
+
+                <div class="footer-connect col-md-4 mb-5 mb-md-0">
+                    <h5 class="text-uppercase mb-5">Let's connect</h5>
+                    <a class="btn btn-face mx-1" href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a class="btn btn-twitter mx-1" href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a class="btn btn-insta mx-1" href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a class="btn btn-tiktok mx-1" href="#">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </div>
+
+                <div class="footer-contacts col-md-4 mb-5 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Contacts</h5>
+
+                    <p class="mb-0"><i class="fa-solid fa-location-dot"></i>
+                        3036 Gyöngyöstarján
+                        <br>Jókai Mór tér 2
+                    </p>
+                    <p class="mb-0"><i class="fa-solid fa-phone"></i>
+                        +36 30 295 22 15</p>
+                    <p class="mb-0"><i class="fa-solid fa-envelope"></i>
+                        totalmatt@gmail.com</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="copyright mt-md-3 pb-4 text-center text-white">
+            <div class="container">
+                <small><a href="#">View Privacy Policy</a> | All rights reserved &copy; 2025</small>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/navbar.js"></script>
+        <script>
+    // iOS fix: enable :active styles
+    document.addEventListener("touchstart", function () {}, true);
+  </script>
+</body>
+
+</html>
